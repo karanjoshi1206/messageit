@@ -34,7 +34,7 @@ socket.on("message", message => {
 function outputMessage(message) {
     const div = document.createElement("li")
     div.classList.add("message")
-    div.innerHTML = `  <span class="username" id="username">${message.username}</span>
+    div.innerHTML = `<span class="username" id="username">${message.username}</span>
     <span class="time" id="time">${message.time}</span>
 
     <p> ${message.text}</p>`

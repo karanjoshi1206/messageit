@@ -74,10 +74,10 @@
 
   background-color: black;
 }
-#text {
-  display: none;
-}
 
+.username {
+  font-weight: bold;
+}
 .show {
   display: none;
 }
@@ -165,13 +165,12 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   height: 40px;
   outline: none;
   border: none;
   border-top: 2px solid black;
   padding: 5px 30px;
-  margin: 0 20px;
 }
 .messagesent button {
   position: absolute;
@@ -252,6 +251,10 @@
   .join_box .lower .message_form {
     display: flex;
     flex-direction: column;
+  }
+  .messagesent input {
+    width: 100%;
+    border: 2px solid black;
   }
   .join_box .lower .message_form input {
     height: 30px;

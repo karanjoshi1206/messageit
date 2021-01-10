@@ -49,12 +49,12 @@ io.on("connection", socket => {
         const user = userLeave(socket.id)
         if (user) {
             io.to(user.room).emit("message", formatMessage(Admin, `${user.username} has left the chat`))
-
+            io.to(user.room).emit("roomUsers", {
+                room: user.room,
+                users: getRoomUsers(user.room)
+            })
         }
-        io.to(user.room).emit("roomUsers", {
-            room: user.room,
-            users: getRoomUsers(user.room)
-        })
+
     })
 
 })
