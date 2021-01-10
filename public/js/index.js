@@ -35,7 +35,7 @@ function outputMessage(message) {
     const div = document.createElement("li")
     div.classList.add("message")
     div.innerHTML = `<span class="username" id="username">${message.username}</span>
-    <span class="time" id="time">${message.time}</span>
+    <span class="time" id="time"></span>
 
     <p> ${message.text}</p>`
     document.getElementById("message-container").appendChild(div)
