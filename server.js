@@ -1,7 +1,7 @@
 const express = require("express")
 const http = require("http")
 const path = require("path")
-const port = 3000 || process.env.port;
+const port = 3000 || process.env.PORT;
 const socketio = require("socket.io")
 const formatMessage = require("./utils/messages")
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require("./utils/users")
