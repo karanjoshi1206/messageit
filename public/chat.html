@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat it</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="chat_contaianer">
+        <div class="chat_upper">
+            <div class="logo">
+                <i class="fas fa-sms"></i>
+                <h1>Lets Konnect</h1>
+            </div>
+            <form action="/index.html">
+                <button type="submit" class="btn2">Leave Room</button>
+            </form>
+            <button onclick="show()" class="btn2 show">Show people</button>
+
+
+        </div>
+        <div class="chat_lower">
+            <div class="people" id="people">
+                <h3>Chat Room</h3>
+                <h4 class="room" id="room">
+                </h4>
+                <br><br>
+                <h2><i class="fas fa-user-friends"></i> Users</h2>
+                <ol class="user" id="user">
+                </ol>
+
+            </div>
+            <div class="message_container" id="message-container">
+
+
+            </div>
+            <div class="messagesent">
+                <form id="chat-form">
+                    <input id="messagesent" type="text" placeholder="Type your message here">
+                    <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+        integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+        crossorigin="anonymous"></script>
+    <script src="/js/index.js"> </script>
+</body>
+
+</html>

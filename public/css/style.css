@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join_box {
+  padding: 50px;
+  /* background-color: rgba(75, 255, 231, 0.637); */
+  background-color: black;
+}
+
+.join_box .upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  color: white;
+  /* background-color: rgba(72, 249, 255, 0.452); */
+  background-color: #111;
+  padding: 10px;
+}
+.join_box .upper i,
+.join_box .upper h1 {
+  font-size: 30px;
+  margin-right: 20px;
+}
+.join_box .lower {
+  /* background-color: rgba(76, 181, 184, 0.253); */
+  background-color: #111;
+  color: white;
+  padding: 10px;
+}
+
+.join_box .lower .message_form {
+  display: flex;
+  flex-direction: column;
+}
+.join_box .lower .message_form input {
+  height: 30px;
+  outline: none;
+  padding: 10px;
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: rgb(0, 217, 255);
+  padding: 5px 10px;
+  width: fit-content;
+  margin: auto;
+  color: black;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:hover,
+.btn2:hover {
+  color: rgb(0, 217, 255);
+
+  background-color: black;
+}
+#text {
+  display: none;
+}
+
+.show {
+  display: none;
+}
+.message {
+  background-color: rgba(0, 0, 0, 0.116);
+  padding: 5px 10px;
+}
+.chat_contaianer {
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+.chat_contaianer .chat_upper {
+  background-color: black;
+  display: flex;
+  width: 100%;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 10vh;
+}
+.chat_contaianer .chat_upper .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat_contaianer .chat_upper .logo i,
+.chat_contaianer .chat_upper .logo h1 {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.btn2 {
+  background-color: rgb(0, 217, 255);
+  padding: 5px 10px;
+  width: fit-content;
+  color: black;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.chat_lower {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.chat_lower .people {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 20%;
+  padding: 30px;
+  border-top: 1px solid white;
+  overflow-y: scroll;
+}
+.chat_lower .message_container {
+  overflow-y: scroll !important;
+  width: 80%;
+  height: 80vh;
+}
+.chat_lower .message_container li {
+  list-style-type: none;
+  margin: 20px;
+}
+.people h2 {
+  margin-bottom: 10px;
+}
+
+.user {
+  margin-left: 10px;
+}
+
+.user li {
+  margin: 0;
+}
+
+.messagesent input {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-top: 2px solid black;
+  padding: 5px 30px;
+  margin: 0 20px;
+}
+.messagesent button {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  height: 40px;
+  width: 70px;
+  /* margin-right: 20px; */
+  background-color: rgb(0, 217, 255);
+  padding: 5px 30px;
+  width: fit-content;
+  color: black;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.messagesent {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 990px) {
+  .show {
+    display: block;
+  }
+  button {
+    font-size: 10px;
+    padding: 3px;
+  }
+  .chat_contaianer .chat_upper .logo i,
+  .chat_contaianer .chat_upper .logo h1 {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  .people {
+    padding: 10px 20px !important;
+    position: absolute;
+    left: -100%;
+    width: 200px !important;
+    transition: 0.5s;
+  }
+  .people.toggle {
+    left: 0;
+  }
+  .main_container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .join_box {
+    padding: 10px;
+    width: 350px;
+  }
+  .join_box .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+    background-color: #111;
+    padding: 0px;
+  }
+  .join_box .upper i,
+  .join_box .upper h1 {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .join_box .lower {
+    background-color: #111;
+    color: white;
+    padding: 10px;
+  }
+
+  .join_box .lower .message_form {
+    display: flex;
+    flex-direction: column;
+  }
+  .join_box .lower .message_form input {
+    height: 30px;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}
